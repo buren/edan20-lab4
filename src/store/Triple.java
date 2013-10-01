@@ -54,10 +54,6 @@ public class Triple {
         this.wObject = wObject;
     }
 
-    public void addOccurrence() {
-        this.frequency++;
-    }
-
 
     public boolean isTriplet(){
         return subject != null && verb != null && wObject  != null;

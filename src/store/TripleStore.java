@@ -73,7 +73,6 @@ public class TripleStore {
             if (frequencyTriplets.containsKey(triple)){
                 int frequency = frequencyTriplets.get(triple) + 1;
                 frequencyTriplets.put(triple, frequency);
-                triple.addOccurrence();
             } else {
                 frequencyTriplets.put(triple, 1);
             }
