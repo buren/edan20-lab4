@@ -20,55 +20,47 @@ public class TripleStore {
     public List<Triple> getPairs(List<List<Word>> sentenceList) {
         for (List<Word> sentence : sentenceList){
             for (Word word : sentence) {
-                if (word.getDeprel().toLowerCase().equals("ss"))
+                if (word.getDeprel().equals("SS"))
                     pairList.add(new Triple(word, sentence.get(word.getHead())));
             }
         }
         return pairList;
     }
 
-    public HashMap<String, List<Triple>> getAllPairs(List<List<Word>> sentenceList) {
-        List<Triple> nonTripletpairList = new ArrayList<Triple>();
-        this.tripletList = new ArrayList<Triple>();
-        for (List<Word> sentence : sentenceList){
+    public List<Triple> buildTriplets(List<List<Word>> sentenceList) {
+        for (List<Word> currentSentence : sentenceList){
             HashMap<Integer, Triple> sentenceTriplets = new HashMap<Integer, Triple>();
-            for (Word word : sentence) {
-                String deprel = word.getDeprel().toLowerCase();
-                Triple currentTriple = null;
-                if (sentenceTriplets.containsKey(word.getHead())){
-                    currentTriple = sentenceTriplets.get(word.getHead());
-                }
-                if (deprel.equals("ss")){
-                    if (currentTriple == null){
-                        currentTriple = new Triple();
-                    }
-                    currentTriple.setSubject(word);
-                    currentTriple.setVerb(sentence.get(word.getHead()));
-                    sentenceTriplets.put(word.getHead(), currentTriple);
-                } else if (deprel.equals("oo")){
-                    if (currentTriple == null) {
-                        currentTriple = new Triple();
-                    }
-                    currentTriple.setwObject(word);
-                    currentTriple.setVerb(sentence.get(word.getHead()));
-                    sentenceTriplets.put(word.getHead(), currentTriple);
+            for (Word currentWord : currentSentence) {
+                if (currentWord.getDeprel().equals("SS") || currentWord.getDeprel().equals("OO")) {
+                    sentenceTriplets.put(currentWord.getHead(), this.findOrCreateTriplet(currentWord, sentenceTriplets, currentSentence));
                 }
             }
             for (Triple sentenceTriple : sentenceTriplets.values()){
                 if (sentenceTriple.isTriplet())
                     tripletList.add(sentenceTriple);
-                else
-                    nonTripletpairList.add(sentenceTriple);
             }
         }
-        HashMap<String, List<Triple>> pairs = new HashMap<String, List<Triple>>();
-        pairs.put("nonTripletpairs", nonTripletpairList);
-        pairs.put("triplets", tripletList);
-        return pairs;
+        return tripletList;
     }
 
+    private Triple findOrCreateTriplet(Word currentWord, HashMap<Integer, Triple> sentenceTriplets, List<Word> currentSentence) {
+        Triple currentTriple = new Triple();
+        if (sentenceTriplets.containsKey(currentWord.getHead()))
+            currentTriple = sentenceTriplets.get(currentWord.getHead());
+
+        if (currentWord.getDeprel().equals("SS"))
+            currentTriple.setSubject(currentWord);
+        else if (currentWord.getDeprel().equals("OO"))
+            currentTriple.setwObject(currentWord);
+
+        currentTriple.setVerb(currentSentence.get(currentWord.getHead()));
+
+        return currentTriple;
+    }
+
+
     public HashMap<Triple, Integer> getTripletsByFrequency(List<Triple> triples) {
-     HashMap<Triple, Integer> frequencyTriplets = new HashMap<Triple, Integer>();
+        HashMap<Triple, Integer> frequencyTriplets = new HashMap<Triple, Integer>();
         for (Triple triple : triples) {
             if (frequencyTriplets.containsKey(triple)){
                 Integer frequency = frequencyTriplets.get(triple) + 1;
@@ -81,7 +73,16 @@ public class TripleStore {
         return frequencyTriplets;
     }
 
+    public Map<Integer, Triple> invertTripletsByFrequency(HashMap<Triple, Integer> tripletsFrequency){
+        return invert(tripletsFrequency);
+    }
 
-
+    // Inverts a HashMap's key -> value
+    private static <V, K> Map<V, K> invert(Map<K, V> map) {
+        Map<V, K> inv = new HashMap<V, K>();
+        for (Map.Entry<K, V> entry : map.entrySet())
+            inv.put(entry.getValue(), entry.getKey());
+        return inv;
+    }
 
 }

@@ -98,12 +98,22 @@ public class CONLLCorpus {
         List<List<Word>> sentenceList;
         sentenceList = trainingCorpus.loadFile(trainingSet);
         TripleStore ts = new TripleStore();
-        HashMap<String, List<Triple>> pairs = ts.getAllPairs(sentenceList);
-        System.out.println("Non triplet pairs: " + pairs.get("nonTripletpairs").size());
-        System.out.println("Triplets: " + pairs.get("triplets").size());
-        for (Triple t : ts.getTripletsByFrequency(pairs.get("triplets")).keySet()) {
-            if (t.getFrequency() > 1)
-                System.out.println(t.getFrequency());
+
+        List<Triple> triples = ts.buildTriplets(sentenceList);
+        System.out.println("\n Subject->Verb pairs:            "  + ts.getPairs(sentenceList).size());
+        System.out.println(" Subject->Verb->Object pairs:    " + triples.size());
+        HashMap<Triple, Integer>  frequencyTriplets = ts.getTripletsByFrequency(triples);
+        System.out.println(" Unique triplets:                " + frequencyTriplets.values().size());
+        for (Map.Entry<Triple, Integer> entry : frequencyTriplets.entrySet()){
+            if (entry.getValue() > 1)
+                System.out.println(entry.getValue() + " " + entry.getKey().print());
         }
+        Map<Integer, Triple> tripletsFrequency = ts.invertTripletsByFrequency(frequencyTriplets);
+        for (int i = 1000; i > 0; i--){
+            if (tripletsFrequency.containsKey(i))
+                System.out.println(i + " :: " + tripletsFrequency.get(i).print());
+        }
+
+
     }
 }

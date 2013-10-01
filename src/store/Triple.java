@@ -18,6 +18,7 @@ public class Triple {
     public Triple(Word subject, Word verb) {
         this.subject = subject;
         this.verb = verb;
+        this.wObject = verb;
     }
 
     public Triple(Word subject, Word verb, Word wObject) {
@@ -84,4 +85,9 @@ public class Triple {
         result = 31 * result + wObject.getForm().hashCode();
         return result;
     }
+
+    public String print() {
+        return subject.getForm() + " -> " +  verb.getForm() + " -> " +  wObject.getForm();
+    }
+
 }
