@@ -98,9 +98,12 @@ public class CONLLCorpus {
         List<List<Word>> sentenceList;
         sentenceList = trainingCorpus.loadFile(trainingSet);
         TripleStore ts = new TripleStore();
-//        ts.getPairs(sentenceList);
         HashMap<String, List<Triple>> pairs = ts.getAllPairs(sentenceList);
-        pairs.get("nonTripletpairs");
-        pairs.get("triplets");
+        System.out.println("Non triplet pairs: " + pairs.get("nonTripletpairs").size());
+        System.out.println("Triplets: " + pairs.get("triplets").size());
+        for (Triple t : ts.getTripletsByFrequency(pairs.get("triplets")).keySet()) {
+            if (t.getFrequency() > 1)
+                System.out.println(t.getFrequency());
+        }
     }
 }

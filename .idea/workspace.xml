@@ -6,9 +6,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Features.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380642282834" ignored="false" />
     <file path="$PROJECT_DIR$/src/guide/Features/java.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380641938253" ignored="false" />
-    <file path="/CONLLCorpus.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380650308854" ignored="false" />
-    <file path="/Triple.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380648693439" ignored="false" />
-    <file path="/TripleStore.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380649581664" ignored="false" />
+    <file path="/CONLLCorpus.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380652609323" ignored="false" />
+    <file path="/Triple.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380652190307" ignored="false" />
+    <file path="/TripleStore.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380652716153" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,23 +60,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/store/TripleStore.java" line="66" class="store.TripleStore" package="store">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -85,7 +68,7 @@
     <favorites_list name="lab4" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.609134">
       <split-first>
         <leaf>
           <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
@@ -106,10 +89,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CONLLCorpus.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="CONLLCorpus.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/format/CONLLCorpus.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="103" column="28" selection-start="4071" selection-end="4071" vertical-scroll-proportion="0.79787236">
+                <state line="105" column="16" selection-start="4269" selection-end="4269" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -117,15 +100,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TripleStore.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="TripleStore.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/store/TripleStore.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="40" selection-start="724" selection-end="753" vertical-scroll-proportion="0.0">
+                <state line="79" column="63" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.68703425">
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#854#862#0" expanded="true" />
                     <element signature="e#1035#1052#0" expanded="true" />
                     <element signature="e#2465#2487#0" expanded="true" />
+                    <element signature="e#2766#2783#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -138,7 +122,7 @@
           <file leaf-file-name="Triple.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/store/Triple.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="53" column="67" selection-start="963" selection-end="963" vertical-scroll-proportion="1.1654247">
+                <state line="41" column="8" selection-start="699" selection-end="699" vertical-scroll-proportion="0.22652757">
                   <folding />
                 </state>
               </provider>
@@ -160,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/format/Word.java" />
         <option value="$PROJECT_DIR$/src/guide/Features.java" />
         <option value="$PROJECT_DIR$/src/store/Triple.java" />
-        <option value="$PROJECT_DIR$/src/store/TripleStore.java" />
         <option value="$PROJECT_DIR$/src/format/CONLLCorpus.java" />
+        <option value="$PROJECT_DIR$/src/store/TripleStore.java" />
       </list>
     </option>
   </component>
@@ -564,6 +548,7 @@
             <element signature="e#854#862#0" expanded="true" />
             <element signature="e#1035#1052#0" expanded="true" />
             <element signature="e#2465#2487#0" expanded="true" />
+            <element signature="e#2766#2783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -584,13 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/format/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="59" selection-start="2649" selection-end="2649" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/guide/Features.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="76" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
@@ -600,28 +578,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/Triple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="67" selection-start="963" selection-end="963" vertical-scroll-proportion="1.1654247">
+        <state line="41" column="8" selection-start="699" selection-end="699" vertical-scroll-proportion="0.22652757">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/TripleStore.java">
+    <entry file="file://$PROJECT_DIR$/src/format/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="724" selection-end="753" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#854#862#0" expanded="true" />
-            <element signature="e#1035#1052#0" expanded="true" />
-            <element signature="e#2465#2487#0" expanded="true" />
-          </folding>
+        <state line="39" column="59" selection-start="2649" selection-end="2649" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/format/CONLLCorpus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="28" selection-start="4071" selection-end="4071" vertical-scroll-proportion="0.79787236">
+        <state line="105" column="16" selection-start="4269" selection-end="4269" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/TripleStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="63" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.68703425">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#854#862#0" expanded="true" />
+            <element signature="e#1035#1052#0" expanded="true" />
+            <element signature="e#2465#2487#0" expanded="true" />
+            <element signature="e#2766#2783#0" expanded="true" />
           </folding>
         </state>
       </provider>

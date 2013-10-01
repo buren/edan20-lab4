@@ -67,5 +67,21 @@ public class TripleStore {
         return pairs;
     }
 
+    public HashMap<Triple, Integer> getTripletsByFrequency(List<Triple> triples) {
+     HashMap<Triple, Integer> frequencyTriplets = new HashMap<Triple, Integer>();
+        for (Triple triple : triples) {
+            if (frequencyTriplets.containsKey(triple)){
+                int frequency = frequencyTriplets.get(triple) + 1;
+                frequencyTriplets.put(triple, frequency);
+                triple.addOccurrence();
+            } else {
+                frequencyTriplets.put(triple, 1);
+            }
+        }
+        return frequencyTriplets;
+    }
+
+
+
 
 }
