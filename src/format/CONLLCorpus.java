@@ -2,6 +2,7 @@ package format;
 
 import java.io.*;
 import java.util.*;
+import store.Triple;
 import store.TripleStore;
 
 /**
@@ -97,7 +98,9 @@ public class CONLLCorpus {
         List<List<Word>> sentenceList;
         sentenceList = trainingCorpus.loadFile(trainingSet);
         TripleStore ts = new TripleStore();
-        ts.getPairs(sentenceList);
-        ts.getTriplets(sentenceList);
+//        ts.getPairs(sentenceList);
+        HashMap<String, List<Triple>> pairs = ts.getAllPairs(sentenceList);
+        pairs.get("nonTripletpairs");
+        pairs.get("triplets");
     }
 }

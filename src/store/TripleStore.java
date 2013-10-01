@@ -27,7 +27,9 @@ public class TripleStore {
         return pairList;
     }
 
-    public List<Triple> getTriplets(List<List<Word>> sentenceList) {
+    public HashMap<String, List<Triple>> getAllPairs(List<List<Word>> sentenceList) {
+        List<Triple> nonTripletpairList = new ArrayList<Triple>();
+        this.tripletList = new ArrayList<Triple>();
         for (List<Word> sentence : sentenceList){
             HashMap<Integer, Triple> sentenceTriplets = new HashMap<Integer, Triple>();
             for (Word word : sentence) {
@@ -55,9 +57,14 @@ public class TripleStore {
             for (Triple sentenceTriple : sentenceTriplets.values()){
                 if (sentenceTriple.isTriplet())
                     tripletList.add(sentenceTriple);
+                else
+                    nonTripletpairList.add(sentenceTriple);
             }
         }
-        return tripletList;
+        HashMap<String, List<Triple>> pairs = new HashMap<String, List<Triple>>();
+        pairs.put("nonTripletpairs", nonTripletpairList);
+        pairs.put("triplets", tripletList);
+        return pairs;
     }
 
 
