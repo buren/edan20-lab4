@@ -8,7 +8,7 @@
     <file path="$PROJECT_DIR$/src/guide/Features/java.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380641938253" ignored="false" />
     <file path="/CONLLCorpus.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380652609323" ignored="false" />
     <file path="/Triple.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380652190307" ignored="false" />
-    <file path="/TripleStore.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380652716153" ignored="false" />
+    <file path="/TripleStore.java" changelist="3227481a-65ce-46b6-b2b9-ba4f2d10373f" time="1380653819247" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/store/TripleStore.java" line="79" class="store.TripleStore" package="store">
+      <breakpoint url="file://$PROJECT_DIR$/src/store/TripleStore.java" line="80" class="store.TripleStore" package="store">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -117,10 +117,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TripleStore.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="TripleStore.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/store/TripleStore.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="75" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.6199702">
+                <state line="80" column="0" selection-start="3147" selection-end="3147" vertical-scroll-proportion="0.57974136">
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#854#862#0" expanded="true" />
@@ -136,10 +136,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Triple.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Triple.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/store/Triple.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="56" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.26229507">
+                <state line="61" column="20" selection-start="1046" selection-end="1046" vertical-scroll-proportion="1.1034483">
                   <folding />
                 </state>
               </provider>
@@ -161,8 +161,8 @@
         <option value="$PROJECT_DIR$/src/format/Word.java" />
         <option value="$PROJECT_DIR$/src/guide/Features.java" />
         <option value="$PROJECT_DIR$/src/format/CONLLCorpus.java" />
-        <option value="$PROJECT_DIR$/src/store/TripleStore.java" />
         <option value="$PROJECT_DIR$/src/store/Triple.java" />
+        <option value="$PROJECT_DIR$/src/store/TripleStore.java" />
       </list>
     </option>
   </component>
@@ -425,13 +425,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.271875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -440,7 +440,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10032017" sideWeight="0.728125" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10032017" sideWeight="0.5125" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -609,9 +609,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/Triple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="20" selection-start="1046" selection-end="1046" vertical-scroll-proportion="1.1034483">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/TripleStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.6199702">
+        <state line="80" column="0" selection-start="3147" selection-end="3147" vertical-scroll-proportion="0.57974136">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#854#862#0" expanded="true" />
@@ -619,13 +626,6 @@
             <element signature="e#2465#2487#0" expanded="true" />
             <element signature="e#2766#2783#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/Triple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.26229507">
-          <folding />
         </state>
       </provider>
     </entry>
