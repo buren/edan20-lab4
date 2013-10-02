@@ -102,18 +102,14 @@ public class CONLLCorpus {
         List<Triple> triples = ts.buildTriplets(sentenceList);
         System.out.println("\n Subject->Verb pairs:            "  + ts.getPairs(sentenceList).size());
         System.out.println(" Subject->Verb->Object pairs:    " + triples.size());
+
         HashMap<Triple, Integer>  frequencyTriplets = ts.getTripletsByFrequency(triples);
         System.out.println(" Unique triplets:                " + frequencyTriplets.values().size());
-        for (Map.Entry<Triple, Integer> entry : frequencyTriplets.entrySet()){
-            if (entry.getValue() > 1)
-                System.out.println(entry.getValue() + " " + entry.getKey().print());
-        }
-        Map<Integer, Triple> tripletsFrequency = ts.invertTripletsByFrequency(frequencyTriplets);
-        for (int i = 1000; i > 0; i--){
-            if (tripletsFrequency.containsKey(i))
-                System.out.println(i + " :: " + tripletsFrequency.get(i).print());
-        }
 
+        System.out.println("");
+        List<String> mostFrequentTriplets = ts.mostFrequentTriples(frequencyTriplets, 20);
+        for (String s : mostFrequentTriplets)
+            System.out.println(s);
 
     }
 }

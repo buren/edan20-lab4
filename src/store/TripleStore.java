@@ -31,9 +31,8 @@ public class TripleStore {
         for (List<Word> currentSentence : sentenceList){
             HashMap<Integer, Triple> sentenceTriplets = new HashMap<Integer, Triple>();
             for (Word currentWord : currentSentence) {
-                if (currentWord.getDeprel().equals("SS") || currentWord.getDeprel().equals("OO")) {
+                if (currentWord.getDeprel().equals("SS") || currentWord.getDeprel().equals("OO"))
                     sentenceTriplets.put(currentWord.getHead(), this.findOrCreateTriplet(currentWord, sentenceTriplets, currentSentence));
-                }
             }
             for (Triple sentenceTriple : sentenceTriplets.values()){
                 if (sentenceTriple.isTriplet())
@@ -41,21 +40,6 @@ public class TripleStore {
             }
         }
         return tripletList;
-    }
-
-    private Triple findOrCreateTriplet(Word currentWord, HashMap<Integer, Triple> sentenceTriplets, List<Word> currentSentence) {
-        Triple currentTriple = new Triple();
-        if (sentenceTriplets.containsKey(currentWord.getHead()))
-            currentTriple = sentenceTriplets.get(currentWord.getHead());
-
-        if (currentWord.getDeprel().equals("SS"))
-            currentTriple.setSubject(currentWord);
-        else if (currentWord.getDeprel().equals("OO"))
-            currentTriple.setwObject(currentWord);
-
-        currentTriple.setVerb(currentSentence.get(currentWord.getHead()));
-
-        return currentTriple;
     }
 
 
@@ -73,8 +57,36 @@ public class TripleStore {
         return frequencyTriplets;
     }
 
-    public Map<Integer, Triple> invertTripletsByFrequency(HashMap<Triple, Integer> tripletsFrequency){
-        return invert(tripletsFrequency);
+    public List<String> mostFrequentTriples(HashMap<Triple, Integer> tripletsFrequency, int count){
+        List<String> mostFrequentTriplets = new ArrayList<String>();
+        for (int i = 0; i < count; i++) {
+            int val = Integer.MIN_VALUE;
+            Triple t = null;
+            for (Map.Entry<Triple, Integer> entry : tripletsFrequency.entrySet()) {
+                if (val < entry.getValue()) {
+                    val = entry.getValue();
+                    t = entry.getKey();
+                }
+            }
+            mostFrequentTriplets.add(tripletsFrequency.remove(t).toString() + " " + t.print());
+        }
+        return mostFrequentTriplets;
+    }
+
+
+    private Triple findOrCreateTriplet(Word currentWord, HashMap<Integer, Triple> sentenceTriplets, List<Word> currentSentence) {
+        Triple currentTriple = new Triple();
+        if (sentenceTriplets.containsKey(currentWord.getHead()))
+            currentTriple = sentenceTriplets.get(currentWord.getHead());
+
+        if (currentWord.getDeprel().equals("SS"))
+            currentTriple.setSubject(currentWord);
+        else if (currentWord.getDeprel().equals("OO"))
+            currentTriple.setwObject(currentWord);
+
+        currentTriple.setVerb(currentSentence.get(currentWord.getHead()));
+
+        return currentTriple;
     }
 
     // Inverts a HashMap's key -> value
